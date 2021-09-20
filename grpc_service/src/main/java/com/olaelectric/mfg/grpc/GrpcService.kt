@@ -48,7 +48,11 @@ class GrpcService : Service() {
     private var portNo: Int = INVALID_PORT
 
     private fun createNotification() {
-        startForeground(NOTIFICATION_ID_2, GrpcManager.getChannelNotification(this@GrpcService))
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForeground(NOTIFICATION_ID_2, GrpcManager.getChannelNotification(this@GrpcService))
+        } else {
+            startForeground(NOTIFICATION_ID_1, Notification())
+        }
     }
 
     override fun onCreate() {

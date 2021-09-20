@@ -1,13 +1,8 @@
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
 rootProject.name = "EOL-ECOSApp"
 
 include ':app'
 include ':logging'
 include ':grpc_service'
 include ':dataparserengine'
+include ':presentation'
+include ':base_module'

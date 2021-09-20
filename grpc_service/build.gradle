@@ -4,6 +4,8 @@ plugins {
     id 'com.google.protobuf'
 }
 
+apply from: "../ktlint.gradle"
+
 protobuf {
     protoc {
         artifact = "com.google.protobuf:protoc:3.17.3"
@@ -26,14 +28,14 @@ protobuf {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    compileSdkVersion appCompileSdkVersion
+    buildToolsVersion appBuildToolsVersion
 
     defaultConfig {
-        minSdk 26
-        targetSdk 30
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion appMinSdkVersion
+        targetSdkVersion appTargetSdkVersion
+        versionCode appVersionCode
+        versionName appVersionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"

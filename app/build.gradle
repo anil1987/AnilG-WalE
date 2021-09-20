@@ -1,25 +1,35 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'androidx.navigation.safeargs.kotlin'
     id 'kotlin-kapt'
 }
 
+apply from: "../ktlint.gradle"
+
 android {
-    compileSdk 30
-    buildToolsVersion "30.0.3"
+
+    compileSdkVersion appCompileSdkVersion
+    buildToolsVersion appBuildToolsVersion
 
     defaultConfig {
-        applicationId "com.olaelectric.mfg.common"
-        minSdk 26
-        targetSdk 30
-        versionCode 1
-        versionName "1.0"
+        applicationId "com.olaelectric.mfg.ecos"
+        minSdkVersion appMinSdkVersion
+        targetSdkVersion appTargetSdkVersion
+        versionCode appVersionCode
+        versionName appVersionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
         release {
+            debuggable false
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -31,7 +41,6 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
     buildFeatures {
         dataBinding true
         viewBinding true // for view binding:
@@ -39,10 +48,20 @@ android {
 }
 
 dependencies {
+    implementation project(':grpc_service')
+    implementation project(':logging')
+    implementation project(':presentation')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
-    implementation project(path: ':logging')
-    implementation project(path: ':grpc_service')
+    // added for navigation libraries
+    implementation "androidx.navigation:navigation-fragment-ktx:$project.nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$project.nav_version"
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+    //koin
+    implementation "io.insert-koin:koin-android:$project.koin_version"
 }

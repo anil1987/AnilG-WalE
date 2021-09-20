@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="OlaAppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="snackbarStyle">@style/CustomSnackBarStyle</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppCompatTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Status bar color-->
+        <!--<item name="fontFamily">@font/roboto_regular</item>-->
+        <item name="colorPrimaryDark">@color/primary_dark_color</item>
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorAccent">@color/accent_color</item>
+        <item name="android:textColorPrimary">@color/primary_text_color</item>
+    </style>
+
+    <style name="ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/ActionBar.TitleTextStyle</item>
+    </style>
+
+    <style name="ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/ola_gray_light_text</item>
+
+    </style>
+
+    <style name="AppTheme" parent="AppCompatTheme">
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListViewStyle</item>
+    </style>
+
+    <style name="DropDownListViewStyle">
+        <item name="android:divider">@color/ola_gray_light_searchLine</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="ProgressStyle" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:background">@color/appGrey</item>
+    </style>
+
+    <style name="ContactUsFabStyle" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="materialThemeOverlay">@style/FabStyle</item>
+    </style>
+
+    <style name="FabStyle" parent="">
+        <item name="colorSecondary">@color/black_86_opacity</item>
+        <item name="colorOnSecondary">@color/white</item>
+    </style>
+
+    <style name="CustomSnackBarStyle" parent="Widget.MaterialComponents.Snackbar">
+        <item name="android:background">@drawable/bg_app_button</item>
+    </style>
+
+</resources>
