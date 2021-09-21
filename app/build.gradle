@@ -51,6 +51,8 @@ dependencies {
     implementation project(':grpc_service')
     implementation project(':logging')
     implementation project(':presentation')
+    implementation project(':data')
+    implementation project(':domain')
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'

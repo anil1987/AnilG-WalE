@@ -7,13 +7,17 @@ import android.content.IntentFilter
 import android.widget.Toast
 import com.olaelectric.mfg.base.BaseFragment
 import com.olaelectric.mfg.ecos.presentation.databinding.FragmentFirstBinding
+import com.olaelectric.mfg.ecos.presentation.viewmodels.FirstFragmentViewModel
 import com.olaelectric.mfg.grpc.GrpcService
 import com.olaelectric.mfg.logging.AppLogger
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class FirstFragment : BaseFragment<FragmentFirstBinding>() {
     companion object {
         val TAG = FirstFragment::class.simpleName.toString()
     }
+
+    private val viewModel: FirstFragmentViewModel by viewModel()
 
     override fun getDataBinding(): FragmentFirstBinding {
         return FragmentFirstBinding.inflate(layoutInflater)

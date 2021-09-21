@@ -3,6 +3,8 @@ package com.olaelectric.mfg.ecos
 import android.app.Activity
 import android.app.Application
 import androidx.appcompat.app.AppCompatActivity
+import com.olaelectric.mfg.ecos.data.koin.dataKoinModule
+import com.olaelectric.mfg.ecos.domain.koin.domainKoinModule
 import com.olaelectric.mfg.ecos.presentation.koin.presentationKoinModule
 import com.olaelectric.mfg.ecos.presentation.router.IAppLifecycle
 import org.koin.android.ext.koin.androidContext
@@ -36,7 +38,10 @@ class EolEcosApp : Application(), IAppLifecycle {
         startKoin {
             androidLogger()
             androidContext(this@EolEcosApp)
-            modules(presentationKoinModule + module { single<IAppLifecycle> { this@EolEcosApp } })
+            modules(
+                presentationKoinModule + dataKoinModule + domainKoinModule +
+                    module { single<IAppLifecycle> { this@EolEcosApp } }
+            )
         }
     }
 }
