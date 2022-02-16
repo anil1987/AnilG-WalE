@@ -1,10 +1,9 @@
-rootProject.name = "EOL-ECOSApp"
+rootProject.name = "AstronomyApp"
 
 include ':app'
 include ':logging'
-include ':grpc_service'
-include ':dataparserengine'
 include ':presentation'
 include ':base_module'
 include ':domain'
 include ':data'
+include ':retrofit_module'

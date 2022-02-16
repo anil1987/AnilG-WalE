@@ -14,11 +14,10 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/base_module" />
             <option value="$PROJECT_DIR$/data" />
-            <option value="$PROJECT_DIR$/dataparserengine" />
             <option value="$PROJECT_DIR$/domain" />
-            <option value="$PROJECT_DIR$/grpc_service" />
             <option value="$PROJECT_DIR$/logging" />
             <option value="$PROJECT_DIR$/presentation" />
+            <option value="$PROJECT_DIR$/retrofit_module" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

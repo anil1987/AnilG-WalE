@@ -13,7 +13,7 @@ android {
     buildToolsVersion appBuildToolsVersion
 
     defaultConfig {
-        applicationId "com.olaelectric.mfg.ecos"
+        applicationId "com.nasa.astronomy"
         minSdkVersion appMinSdkVersion
         targetSdkVersion appTargetSdkVersion
         versionCode appVersionCode
@@ -48,7 +48,6 @@ android {
 }
 
 dependencies {
-    implementation project(':grpc_service')
     implementation project(':logging')
     implementation project(':presentation')
     implementation project(':data')

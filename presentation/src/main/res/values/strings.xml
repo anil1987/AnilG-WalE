@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="connect">Connect</string>
+    <string name="str_unable_to_load_error">We are not connected to the internet, showing you the last image we have.</string>
+    <string name="str_ok">OK</string>
+    <string name="str_load_error">We are not connected to the internet. Please try again later.</string>
+    <string name="str_unable_to_fetch_details">Unable to fetch the details. Please try again later.</string>
 </resources>

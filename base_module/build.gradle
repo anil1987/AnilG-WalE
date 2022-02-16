@@ -63,6 +63,4 @@ dependencies {
 
     //  implementation 'id.zelory:compressor:2.1.0'
     annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
-
-    api("com.etergo.appscooter:domain_base:$domain_base_version")
 }

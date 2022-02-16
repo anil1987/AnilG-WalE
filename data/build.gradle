@@ -38,4 +38,7 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$project.kotlinxCoroutinesVersion"
     // Koin core features
     implementation "io.insert-koin:koin-core:$project.koin_version"
-}
+    implementation project(path: ':retrofit_module')
+    implementation "com.squareup.retrofit2:retrofit:$project.retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$project.retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$project.interceptor_version"}

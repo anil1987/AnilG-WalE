@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="base_module/src/main/res/drawable/bg_app_button.xml" value="0.1" />
         <entry key="presentation/src/main/res/layout/activity_main.xml" value="0.15989583333333332" />
         <entry key="presentation/src/main/res/layout/fragment_first.xml" value="0.1" />
         <entry key="presentation/src/main/res/layout/fragment_vehicle_connection.xml" value="0.2984375" />
