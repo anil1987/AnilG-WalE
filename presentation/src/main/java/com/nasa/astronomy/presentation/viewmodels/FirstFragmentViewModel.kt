@@ -32,6 +32,7 @@ class FirstFragmentViewModel(
         private val TAG = FirstFragmentViewModel::class.simpleName.toString()
         private const val DATE_TIME_FORMAT = "yyyy-MM-dd"
     }
+
     fun getAstroImageResult() {
         astroImageResultUseCase.invoke(
             params = todayDate,
@@ -41,7 +42,6 @@ class FirstFragmentViewModel(
                 AppLogger.i(TAG, it.toString())
             },
             onFailure = {
-                AppLogger.i(TAG, "Fail")
                 _astroImageDetails.postValue(null)
             }
         )

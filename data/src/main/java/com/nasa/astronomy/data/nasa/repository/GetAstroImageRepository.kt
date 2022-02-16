@@ -31,7 +31,7 @@ class GetAstroImageRepository(
                 it
             }
         )
-        //checking for api fail but last image details available
+        // checking for api fail but last image details available
         if (apiResult.isError && result != null) {
             return Either.Success(result)
         }
